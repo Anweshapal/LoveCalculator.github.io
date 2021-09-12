@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love calculator</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+   
+    <div class="container">
+        <form id="form1">
+        <div class="content">
+            <h1>Love Calculator</h1>
+         </div>
+         
+         <div class="inputarea">
+             <input type="text" class="i1" placeholder="Your Name" id="name">
+             <div><span> + </span></div>
+             <input type="text" class="i1" placeholder="Love Name" id="lname">
+         </div>
+      
+         <div class="btn">
+             <button type="button" class="btn1" onclick="checkloveper()">Click</button>
+         </div>
+
+         <div class="btn2">
+            <input type="text" id="btn3" placeholder="Love Percentage">
+         </div>
+        </form>
+    </div>
+<script>
+  function checkloveper(){
+
+      var name=document.getElementById('name').value;
+      var lname=document.getElementById('lname').value;
+
+      if(name ==""){
+          alert("please enter your name"); 
+      }
+      else if(name.length<=2){
+          alert("min length is 3");
+      }
+     else if (!isNaN(name)){
+          alert("numbers are not allowed");
+      }
+
+     else  if(lname ==""){
+          alert("please enter your love name"); 
+      }
+      else if(lname.length<=2){
+          alert("min length is 3");
+      }
+     else if (!isNaN(lname)){
+          alert("numbers are not allowed");
+      }
+    else{
+        var lovedata = Math.random() * 100;
+      lovedata = Math.floor(lovedata);
+      document.getElementById('btn3').value=lovedata + " % "; 
+    }
+
+
+
+  }
+
+
+
+
+
+</script>
+</body>
+</html>
